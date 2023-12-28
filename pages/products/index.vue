@@ -1,7 +1,7 @@
 <template>
       <div class="grid grid-cols-4 gap-4">
             <div v-for="p in products">
-                  <nuxt-link :to="`/products/${p.id}`">{{ p.title }}</nuxt-link>
+                  <product-card :products="p" />
             </div>
       </div>
 </template>
@@ -11,6 +11,12 @@ definePageMeta({
       layout: 'products'
 })
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
+useHead({
+      title: "Nuxt App | Merch",
+      meta: [
+            { name: "description", content: "Nuxt Merch" }
+      ]
+})
 </script>
 
 <style lang="scss" scoped></style>

@@ -6,7 +6,7 @@
                   </nav>
             </header>
             <div class="flex justify-center mt-5">
-                  <div class="max-w-5xl w-full">
+                  <div class="container w-full">
                         <slot />
                   </div>
             </div>
